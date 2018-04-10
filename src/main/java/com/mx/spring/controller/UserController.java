@@ -23,4 +23,10 @@ public class UserController {
         PageInfo<Map> pageInfo = new PageInfo<>(list);
         return pageInfo;
     }
+
+    @RequestMapping("/getException")
+    public Object getException(){
+        int i = 1/0;
+        return i;
+    }
 }
