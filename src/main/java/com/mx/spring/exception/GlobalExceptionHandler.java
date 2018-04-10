@@ -16,6 +16,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler
     public Object processException(Exception e){
         System.out.println("捕获到了异常!!!!");
+        e.printStackTrace();
         Map map = new HashMap();
         map.put("status", "500");
         map.put("data", stackTraceToString(e));

@@ -4,8 +4,12 @@
 
 <mapper namespace="com.mx.spring.dao.UserDAO">
 
-    <select id="getAllUser" resultType="java.util.Map">
+    <select id="getAllUser" resultType="com.mx.spring.entity.User">
       SELECT * FROM USER
     </select>
+    
+    <insert id="addUser">
+        INSERT INTO USER (id, user_name, description) VALUES (#{id}, #{username}, #{description})
+    </insert>
 
 </mapper>
