@@ -22,7 +22,7 @@ public class MybatisMapperScannerConfig {
         MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
         mapperScannerConfigurer.setSqlSessionFactoryBeanName("sqlSessionFactory");
         //设置自动扫描的dao包名
-        mapperScannerConfigurer.setBasePackage("com.mx.spring.dao");
+        mapperScannerConfigurer.setBasePackage("com.**.dao");
         return mapperScannerConfigurer;
     }
 }
