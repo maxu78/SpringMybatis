@@ -44,7 +44,7 @@ public class MybatisConfig implements TransactionManagementConfigurer{
         try{
             //配置mybatis的mapper xml文件位置
             sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath*:mybatis/mapper/**/*.xml"));
-            //配置mybatis的总配置文件
+            //配置mybatis的总配置文件(不可以用classpath*)
             sqlSessionFactoryBean.setConfigLocation(resolver.getResource("classpath:mybatis/mybatis-config.xml"));
             return sqlSessionFactoryBean.getObject();
         } catch (Exception e){
